@@ -4,6 +4,7 @@ import "./weather.css";
 const Weather = ({data,city}) => {
 
     console.log(data);
+    console.log(data.weather[0].icon);
 
 // const elem = data.weather[0];
 // console.log(elem);
@@ -24,6 +25,7 @@ const Weather = ({data,city}) => {
           className="weather-icon"
           src={`icons/${data.weather[0].icon}.png`}
         />
+        
       </div>
       <div className="bottom">
         <p className="temperature">{Math.round(data.main.temp)}°C</p>
